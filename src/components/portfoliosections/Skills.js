@@ -97,7 +97,8 @@ export const Skills = () => {
       <main className="flex-col">
         <h2 className="mb-20 text-6xl text-white">Skills</h2>
         <div className="flex space-x-14">
-          <div>
+          <div className="bg-white">
+          <div className="bg-opacity-25 backdrop-filter backdrop-blur-lg rounded-md">
             <h3 className="mb-5 text-3xl text-center text-white ">Front End</h3>
             <div className="flex space-x-5">
               <div
@@ -209,6 +210,8 @@ export const Skills = () => {
                 </h4>
               </div>
             </div>
+          </div>
+
           </div>
           <div className="flex-col">
             <h3 className="mb-5 text-3xl text-center text-white ">Back End</h3>
