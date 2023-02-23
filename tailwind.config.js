@@ -14,12 +14,16 @@ module.exports = {
       backgroundImage: {
         homebackground: "url(../src/images/portfoliobackground.jpg)",
         buttonbackground1: "url(../src/images/buttonback2.jpg)",
+        experiencebackground: "url(../src/images/buttonback1.jpg)",
+        purpleyblueimage: "url(../src/images/purpleyblueimage.jpg)",
       },
       height: {
         89: "89vh",
         75: "75vh",
         40: "40vh",
+        50: "50vh",
         80: "80vh",
+        90: "90vh",
       },
       colors: {
         contentbackground: "#000053",
