@@ -3,24 +3,10 @@
 export const Contact = () => {
   return (
     <>
-      <main className="w-screen">
-        <div className="flex w-full overflow-x-hidden whitespace-nowrap group">
-          <div className="relative ">
-            <div className="flex space-x-10 group/item animate-slide whitespace-nowrap">
-              <span className="text-white text-9xl">Contact</span>
-              <span className="text-white text-9xl group-hover/item:text-green ">
-                Connect
-              </span>
-              <span className="text-white text-9xl ">Collaborate</span>
-            </div>
-            <div className="absolute top-0 flex ml-10 space-x-10 animate-slide2 whitespace-nowrap">
-              <span className="text-white text-9xl">Contact</span>
-              <span className="text-white text-9xl group-hover/item:text-green ">
-                Connect
-              </span>
-              <span className="text-white text-9xl ">Collaborate</span>
-            </div>
-          </div>
+      <main className="w-screen mt-96">
+        <h2 className="text-center text-6xl text-white font-mono">Contact Me</h2>
+        <div className="w-3/4 border h-40 bg-white">
+
         </div>
         <div className="flex justify-center w-full mt-10 space-x-10">
           <i class="devicon-twitter-original text-white text-7xl"></i>

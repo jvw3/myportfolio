@@ -5,7 +5,7 @@ export const Experience = () => {
   return (
     <>
       <main className="relative ml-20 mr-20 flex-col text-white">
-        <h2 className="mb-10 text-6xl text-white">Experience</h2>
+        <h2 className="mb-10 text-6xl text-white font-mono">Experience</h2>
         <div class="absolute top-10 left-1/2 h-50 w-0 border border-white"></div>
         <div className="absolute bg-contentbackground left-[765px] top-[110px] p-1.5 rounded-full border-white border w-fit">
           <DeviceLaptop />
@@ -26,17 +26,21 @@ export const Experience = () => {
         <div className="flex justify-center relative">
           <div className="">
             <div className="mb-14 w-2/3">
-              <h3 className="text-2xl font-semibold">
+              <h3 className="text-xl font-semibold font-spacemono">
                 Software Development Apprenticeship
               </h3>
-              <h3 className="text-xl">Nashville Software School</h3>
-              <h3 className="text-lg">July 2022 - January 2023</h3>
-              <p className="mt-5 mb-5">
+              <h3 className="text-lg font-spacemono ">
+                Nashville Software School
+              </h3>
+              <h3 className="text-md font-spacemono">
+                July 2022 - January 2023
+              </h3>
+              <p className="mt-5 mb-5 font-spacemono">
                 NSS is a six-month intensive, full-time software development
                 bootcamp focusing on HTML, CSS, Javascript, React and server-
                 side fundamentals with Python and Django.
               </p>
-              <ul className="list-disc">
+              <ul className="list-disc font-spacemono text-sm">
                 <li>
                   Utilized version control using Git/Github to manage source
                   code
@@ -63,13 +67,15 @@ export const Experience = () => {
           </div>
           <div className="mt-[307px] w-1/3">
             <div className="mb-10">
-              <h3 className="text-2xl font-semibold">Professional Athlete</h3>
-              <h3 className="text-xl">
+              <h3 className="text-xl font-semibold font-spacemono">
+                Professional Athlete
+              </h3>
+              <h3 className="text-lg font-spacemono">
                 National Football League • Canadian Football League
               </h3>
-              <h3 className="text-lg">May 2016 - May 2022</h3>
+              <h3 className="text-md font-spacemono">May 2016 - May 2022</h3>
             </div>
-            <ul className="list-disc">
+            <ul className="list-disc font-spacemono text-sm">
               <li>
                 Played for (NFL) Jacksonville Jaguars, Atlanta Falcons, Miami
                 Dolphins, Buffalo Bills, Kansas City Chiefs, and (CFL)
