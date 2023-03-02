@@ -17,6 +17,11 @@ module.exports = {
         experiencebackground: "url(../src/images/buttonback1.jpg)",
         purpleyblueimage: "url(../src/images/purpleyblueimage.jpg)",
       },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        spacemono: ["Space Mono, sans-serif"],
+
+      },
       height: {
         89: "89vh",
         75: "75vh",
