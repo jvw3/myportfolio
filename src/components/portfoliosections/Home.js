@@ -6,22 +6,31 @@ import { Contact } from "./Contact";
 import { Experience } from "./Experience";
 import { Skills } from "./Skills";
 import { Work } from "./Work";
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ArrowDownCircle } from "tabler-icons-react";
+import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 
 export const Home = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ container: ref });
   return (
     <>
-      <main className="flex-col w-full h-full m-0 p-0">
+      <main ref={ref} className="flex-col w-full h-full m-0 p-0">
         <div className="w-screen h-screen bg-center xxl:bg-cover xl:bg-cover lg:bg-cover md:bg-cover sm:bg-cover xs:bg-cover bg-homebackground">
           <div className="flex-col justify-between w-screen h-screen bg-cover bg-gradient-to-b from-transparent via-transparent to-contentbackground">
             <div className="pt-3 pl-3">
               <img className="w-24" src={Logo} />
             </div>
             <div className="flex justify-between w-full pl-10 h-2/4">
-              <h1 className="mt-10 text-white lg:w-60 lg:text-6xl xl:text-6xl xl:w-64 md:text-5xl xxl:text-6xl xxl:w-1/3 font-mono">
-                Hi there, My name is Jonathan Woodard{" "}
-              </h1>
+              <div className="xxl:w-1/3 xl:w-64 lg:w-60">
+                <h1 className="mt-10 text-white lg:text-6xl xl:text-6xl md:text-5xl xxl:text-6xl  font-mono">
+                  Hi, I'm Jonathan{" "}
+                </h1>
+                <div className="font-spacemono text-white">
+                  Full Stack Web Developer
+                </div>
+              </div>
               <motion.img
                 initial={{ translateX: 500 }}
                 animate={{ translateX: 0 }}
@@ -37,6 +46,9 @@ export const Home = () => {
             </div>
             <div className="mt-48">
               <NavBar />
+              <div className="flex justify-center mt-8 animate-bounce">
+                <ArrowDownCircle color="white" size={40} />
+              </div>
             </div>
           </div>
         </div>
@@ -72,6 +84,11 @@ export const Home = () => {
         >
           <Contact />
         </div>
+        <footer className="bg-black h-20">
+          <div className=" text-white font-spacemono text-center pt-7">
+            Created by: Jonathan Woodard
+          </div>
+        </footer>
       </main>
     </>
   );
