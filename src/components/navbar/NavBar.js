@@ -1,34 +1,63 @@
-export const NavBar = () => {
+import { useInView } from "react-intersection-observer";
+
+export const NavBar = ({navBarRef}) => {
+  const options = { threshold: 1 };
+  const { ref: navRef, inView: navVisible } = useInView(options);
+
   const scrollToAbout = () => {
-    document.getElementById("about").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    // document.getElementById("about").scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    //   inline: "nearest",
+    // });
+
+    const element = document.getElementById("about");
+    const topOffset = -25; // Set the offset to 100 pixels
+    const top =
+      element.getBoundingClientRect().top + window.pageYOffset - topOffset;
+    window.scrollTo({ top, behavior: "smooth" });
   };
 
   const scrollToExperience = () => {
-    document.getElementById("experience").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    // document.getElementById("experience").scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    //   inline: "nearest",
+    // });
+
+    const element = document.getElementById("experience");
+    const topOffset = 150; // Set the offset to 100 pixels
+    const top =
+      element.getBoundingClientRect().top + window.pageYOffset - topOffset;
+    window.scrollTo({ top, behavior: "smooth" });
   };
 
   const scrollToSkills = () => {
-    document.getElementById("skills").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    // document.getElementById("skills").scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    //   inline: "nearest",
+    // });
+
+    const element = document.getElementById("skills");
+    const topOffset = 100; // Set the offset to 100 pixels
+    const top =
+      element.getBoundingClientRect().top + window.pageYOffset - topOffset;
+    window.scrollTo({ top, behavior: "smooth" });
   };
 
   const scrollToWork = () => {
-    document.getElementById("work").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    // document.getElementById("work").scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    //   inline: "nearest",
+    // });
+
+    const element = document.getElementById("work");
+    const topOffset = 150; // Set the offset to 100 pixels
+    const top =
+      element.getBoundingClientRect().top + window.pageYOffset - topOffset;
+    window.scrollTo({ top, behavior: "smooth" });
   };
 
   const scrollToContact = () => {
@@ -51,8 +80,8 @@ export const NavBar = () => {
           >
             About
           </button>
-          <div className="group-hover:translate-y-1 bg-gradient-to-t from-transparent via-transparent to-contentbackground rounded-2xl transition-all ease-in-out rotate-180 duration-200  transform -scale-x-100 z-20">
-            <div className=" transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-purpleyblueimage rotate-180 bg-cover opacity-50 text-center  transform -scale-x-100">
+          <div className="group-hover:translate-y-1 bg-purpleyblueimage bg-cover opacity-50 rounded-2xl transition-all ease-in-out rotate-180 duration-200  transform -scale-x-100 z-20">
+            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
               About
             </div>
           </div>
@@ -66,8 +95,10 @@ export const NavBar = () => {
           >
             Experience
           </button>
-          <div className="group-hover:translate-y-1 transition-all font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-gradient-to-t  from-white via-blue-200 to-transparent rotate-180 opacity-40 text-center  transform -scale-x-100">
-            Experience
+          <div className="group-hover:translate-y-1 bg-purpleyblueimage bg-cover opacity-50 rounded-2xl transition-all ease-in-out rotate-180 duration-200  transform -scale-x-100 z-20">
+            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
+              Experience
+            </div>
           </div>
         </div>
         <div className="flex flex-col group">
@@ -79,8 +110,10 @@ export const NavBar = () => {
           >
             Skills
           </button>
-          <div className="group-hover:translate-y-1 transition-all ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-gradient-to-t  from-white via-blue-200 to-transparent rotate-180 opacity-40 font-spacemono text-center  transform -scale-x-100">
-            Skills
+          <div className="group-hover:translate-y-1 bg-purpleyblueimage bg-cover opacity-50 rounded-2xl transition-all ease-in-out rotate-180 duration-200  transform -scale-x-100 z-20">
+            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
+              Skills
+            </div>
           </div>
         </div>
         <div className="flex flex-col group">
@@ -92,8 +125,10 @@ export const NavBar = () => {
           >
             Work
           </button>
-          <div className="group-hover:translate-y-1 transition-all ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-gradient-to-t font-spacemono text-center   from-white via-blue-200 to-transparent rotate-180 opacity-40 transform -scale-x-100">
-            Work
+          <div className="group-hover:translate-y-1 bg-purpleyblueimage bg-cover opacity-50 rounded-2xl transition-all ease-in-out rotate-180 duration-200  transform -scale-x-100 z-20">
+            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
+              Work
+            </div>
           </div>
         </div>
         <div className="flex flex-col group">
@@ -105,8 +140,10 @@ export const NavBar = () => {
           >
             Contact
           </button>
-          <div className="group-hover:translate-y-1 transition-all font-spacemono text-center ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-gradient-to-t  from-white via-blue-200 to-transparent rotate-180 opacity-40 transform -scale-x-100">
-            Contact
+          <div className="group-hover:translate-y-1 bg-purpleyblueimage bg-cover opacity-50 rounded-2xl transition-all ease-in-out rotate-180 duration-200  transform -scale-x-100 z-20">
+            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
+              Contact
+            </div>
           </div>
         </div>
       </nav>
