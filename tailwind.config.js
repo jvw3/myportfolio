@@ -12,15 +12,15 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        homebackground: "url(../src/images/portfoliobackground.jpg)",
+        homebackground: "url(../src/images/smallerbackground.jpg)",
         buttonbackground1: "url(../src/images/buttonback2.jpg)",
         experiencebackground: "url(../src/images/buttonback1.jpg)",
         purpleyblueimage: "url(../src/images/purpleyblueimage.jpg)",
+        profilepic: "url(../src/images/headshotbackground.jpeg)",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         spacemono: ["Space Mono, sans-serif"],
-
       },
       height: {
         89: "89vh",
@@ -52,8 +52,8 @@ module.exports = {
         },
       },
       animation: {
-        appear: "appear 0.25s ease-in-out",
-        disappear: "disappear 0.25s ease-in-out",
+        appear: "appear 0.75s ease-in-out",
+        disappear: "disappear 0.75s ease-in-out",
         slide: "slide 30s infinite linear",
         slide2: "slide2 30s infinite linear",
       },
