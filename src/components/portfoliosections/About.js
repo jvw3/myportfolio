@@ -1,25 +1,23 @@
 import profilePic from "../../images/headshotbackground.jpeg"
 import resume from "../../documents/myresume.pdf"
-// import { useInView } from "react-intersection-observer";
-import { useInView } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+// import { useInView } from "framer-motion";
 // import { useRef } from "react";
 
 export const About = () => {
-  const options = { threshold: 0.6 };
+  const options = { threshold: 0.4, triggerOnce: true };
   const { ref: aboutRef, inView: aboutVisible } = useInView(options);
-  // const aboutRef = useRef(null);
-  // const aboutVisible = useInView(aboutRef, 0.99);
+
 
   return (
     <>
       <main
         ref={aboutRef}
-        className="flex-col ml-20 "
+        className={`flex-col ml-20 ${aboutVisible ? "animate-appear" : "invisible"}`}
       >
         <h2 className=" text-6xl text-white font-mono">About</h2>
         <div className="flex ml-20 mt-10">
-          <img className="relative w-1/5 z-10" src={profilePic}></img>
-          <div className="absolute left-[100px] top-[1220px] bg-purpleyblueimage bg-cover w-1/5 h-1/2 z-0"></div>
+          <img className="relative w-1/5 z-10 rounded-3xl" src={profilePic}></img>
           <div className="flex flex-col">
             <div className="ml-40 mb-10">
               <a
