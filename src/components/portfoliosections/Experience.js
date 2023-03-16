@@ -1,10 +1,18 @@
 import experienceBackground from "../../images/buttonback1.jpg";
 import { DeviceLaptop, BallAmericanFootball } from "tabler-icons-react"
+import { useInView } from "react-intersection-observer";
 
 export const Experience = () => {
+    const options = { threshold: 0.4, triggerOnce: true };
+    const { ref: experienceRef, inView: experienceVisible } = useInView(options);
   return (
     <>
-      <main className="relative ml-20 mr-20 flex-col text-white">
+      <main
+        ref={experienceRef}
+        className={`relative ml-20 mr-20 flex-col text-white ${
+          experienceVisible ? "animate-appear" : "invisible"
+        }`}
+      >
         <h2 className="mb-10 text-6xl text-white font-mono">Experience</h2>
         <div class="absolute top-10 left-1/2 h-50 w-0 border border-white"></div>
         <div className="absolute bg-contentbackground left-[765px] top-[110px] p-1.5 rounded-full border-white border w-fit">
