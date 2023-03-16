@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 
-export const NavBar = ({navBarRef}) => {
+export const NavBar = () => {
   const options = { threshold: 1 };
   const { ref: navRef, inView: navVisible } = useInView(options);
 
