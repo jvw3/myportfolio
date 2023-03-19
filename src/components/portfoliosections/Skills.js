@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 export const Skills = () => {
+  const options = { threshold: 0.4, triggerOnce: true };
+  const { ref: skillsRef, inView: skillsVisible } = useInView(options);
+
   const [isHoveringHtml, setIsHoveringHtml] = useState(false);
   const [isHoveringCss, setIsHoveringCss] = useState(false);
   const [isHoveringJavascript, setIsHoveringJavascript] = useState(false);
@@ -97,12 +101,14 @@ export const Skills = () => {
     setIsHoveringJira(false);
   };
 
-
-
   return (
     <>
-      <main className="flex-col">
+      <main
+        ref={skillsRef}
+        className={`flex-col ${skillsVisible ? "animate-appear" : "invisible"}`}
+      >
         <h2 className="mb-20 text-6xl text-white font-mono">Skills</h2>
+        <div className="flex justify-center">
           <div className="flex space-x-14 p-5 bg-white bg-opacity-30 backdrop-filter backdrop-blur-xl rounded-xl">
             <div className=" bg-cover rounded-xl">
               <h3 className="mb-5 text-3xl text-center text-white ">
@@ -385,6 +391,7 @@ export const Skills = () => {
               </div>
             </div>
           </div>
+        </div>
         <p></p>
       </main>
     </>
