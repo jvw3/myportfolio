@@ -8,7 +8,7 @@ module.exports = {
       md: { min: "768px", max: "1023px" },
       lg: { min: "1024px", max: "1279px" },
       xl: { min: "1280px", max: "1535px" },
-      xxl: "1536px",
+      xxl: { min: "1536px" },
     },
     extend: {
       backgroundImage: {
@@ -46,6 +46,10 @@ module.exports = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        slideIn: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
         slide2: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(100%)" },
@@ -54,8 +58,8 @@ module.exports = {
       animation: {
         appear: "appear 0.75s ease-in-out",
         disappear: "disappear 0.75s ease-in-out",
-        slide: "slide 30s infinite linear",
-        slide2: "slide2 30s infinite linear",
+        slide: "slide 0.3s ease-in-out",
+        slide2: "slide2 0.3s ease-in-out",
       },
     },
   },
