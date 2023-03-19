@@ -40,7 +40,7 @@ export const Contact = () => {
           Contact Me
         </h2>
         <div className="flex justify-center ">
-          <div className="w-1/2 border h-[500px] bg-white rounded-xl mt">
+          <div className=" sm:w-3/4 md:w-2/3 w-1/2 border h-[500px] bg-white rounded-xl ">
             <form
               className="flex justify-center mt-10
             "
