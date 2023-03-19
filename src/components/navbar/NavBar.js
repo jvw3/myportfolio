@@ -76,12 +76,12 @@ export const NavBar = () => {
             onClick={() => {
               scrollToAbout();
             }}
-            className="group-hover:-translate-y-1 transition-all tracking-widest ease-in-out duration-200 p-3 w-32 h-14  rounded-2xl bg-purpleyblueimage bg-cover bg-opacity-30 backdrop-filter backdrop-blur-xl font-spacemono"
+            className="group-hover:-translate-y-1 transition-all tracking-widest ease-in-out duration-200 p-3 w-32 xs:w-24 sm:w-24 sm:h-10 sm:p-1  h-14  rounded-2xl bg-purpleyblueimage bg-cover bg-opacity-30 backdrop-filter backdrop-blur-xl font-spacemono"
           >
             About
           </button>
           <div className="group-hover:translate-y-1 bg-purpleyblueimage bg-cover opacity-50 rounded-2xl transition-all ease-in-out rotate-180 duration-200  transform -scale-x-100 z-20">
-            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
+            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 sm:w-24 sm:h-10 sm:p-1 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
               About
             </div>
           </div>
@@ -91,12 +91,12 @@ export const NavBar = () => {
             onClick={() => {
               scrollToExperience();
             }}
-            className="group-hover:-translate-y-1 transition-all tracking-widest ease-in-out duration-200 p-3 w-32 h-14  rounded-2xl bg-purpleyblueimage bg-cover bg-opacity-30 backdrop-filter font-spacemono backdrop-blur-xl"
+            className="group-hover:-translate-y-1 transition-all tracking-widest ease-in-out duration-200 xs:w-24 sm:w-24 sm:h-10 sm:p-1 p-3 w-32 h-14  rounded-2xl bg-purpleyblueimage bg-cover bg-opacity-30 backdrop-filter font-spacemono backdrop-blur-xl"
           >
             Experience
           </button>
           <div className="group-hover:translate-y-1 bg-purpleyblueimage bg-cover opacity-50 rounded-2xl transition-all ease-in-out rotate-180 duration-200  transform -scale-x-100 z-20">
-            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 p-3 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
+            <div className="bg-gradient-to-t from-transparent via-transparent to-contentbackground transition-all -z-0 font-spacemono ease-in-out duration-200 xs:w-24 sm:w-24 sm:h-10 sm:p-1 p-3 w-32 h-14 rounded-2xl bg-cover  text-center  transform ">
               Experience
             </div>
           </div>
@@ -106,7 +106,7 @@ export const NavBar = () => {
             onClick={() => {
               scrollToSkills();
             }}
-            className="group-hover:-translate-y-1 transition-all tracking-widest ease-in-out duration-200 p-3 w-32 h-14  rounded-2xl bg-purpleyblueimage bg-cover bg-opacity-30 backdrop-filter font-spacemono backdrop-blur-xl"
+            className="group-hover:-translate-y-1 transition-all tracking-widest ease-in-out duration-200 xs:w-24 sm:w-24 sm:h-10 sm:p-1 p-3 w-32 h-14  rounded-2xl bg-purpleyblueimage bg-cover bg-opacity-30 backdrop-filter font-spacemono backdrop-blur-xl"
           >
             Skills
           </button>
