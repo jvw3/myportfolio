@@ -13,27 +13,28 @@ export const Experience = () => {
           experienceVisible ? "animate-appear" : "invisible"
         }`}
       >
+        
         <h2 className="mb-10 text-6xl text-white font-mono">Experience</h2>
-        <div class="absolute top-10 left-1/2 h-50 w-0 border border-white"></div>
+        <div class="absolute top-10 left-[784px] h-50 w-0 border border-white"></div>
         <div className="absolute bg-contentbackground left-[765px] top-[110px] p-1.5 rounded-full border-white border w-fit">
           <DeviceLaptop />
         </div>
         <div className="absolute bg-contentbackground left-[765px] top-[400px] p-1.5 rounded-full border-white border-2 w-fit">
           <BallAmericanFootball />
         </div>
-        <div className="absolute w-3 h-3 rounded-full bg-white left-[1075px] top-[415px]"></div>
+        <div className="absolute w-3 h-3 rounded-full bg-white left-[950px] top-[415px]"></div>
         <div className="absolute w-3 h-3 rounded-full bg-white left-[480px] top-[123px]"></div>
         <div
           class="w-[275px] h-0 left-[490px] top-[127px]
   absolute border border-white"
         ></div>
         <div
-          class="w-[275px] h-0 left-[803px] top-[420px]
+          class="w-[150px] h-0 left-[803px] top-[420px]
   absolute border border-white"
         ></div>
         <div className="flex justify-center relative">
           <div className="">
-            <div className="mb-14 w-2/3">
+            <div className="mb-14 w-1/3 mt-3 ml-32 ">
               <h3 className="text-xl font-semibold font-spacemono">
                 Software Development Apprenticeship
               </h3>
@@ -73,7 +74,7 @@ export const Experience = () => {
               </ul>
             </div>
           </div>
-          <div className="mt-[307px] w-1/3">
+          <div className="mt-[307px] w-1/3 mr-32">
             <div className="mb-10">
               <h3 className="text-xl font-semibold font-spacemono">
                 Professional Athlete
