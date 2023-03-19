@@ -10,8 +10,13 @@ import { ArrowDownCircle } from "tabler-icons-react";
 import { useInView } from "react-intersection-observer";
 
 export const Home = () => {
-  // const options = { threshold: 0.4 };
+  const options = { threshold: 0.4 };
   const { ref: navbarRef, inView: navBarVisible } = useInView();
+  const { ref: aboutNavRef, inView: aboutVisible } = useInView(options);
+  const { ref: experienceNavRef, inView: experienceVisible } = useInView(options);
+  const { ref: skillsNavRef, inView: skillsVisible } = useInView(options);
+  const { ref: workNavRef, inView: workVisible } = useInView(options);
+  const { ref: contactNavRef, inView: contactVisible } = useInView(options);
 
   const scrollToAbout = () => {
     // document.getElementById("about").scrollIntoView({
@@ -84,7 +89,7 @@ export const Home = () => {
   };
   return (
     <>
-      <main className="flex-col w-full h-full m-0 p-0">
+      <main className="flex-col w-full h-full m-0 p-0 overflow-x-hidden">
         <div className="flex w-full h-full">
           <div className="">
             <div className="w-screen h-screen bg-center xxl:bg-cover xl:bg-cover lg:bg-cover md:bg-cover sm:bg-cover xs:bg-cover bg-homebackground">
@@ -120,34 +125,39 @@ export const Home = () => {
               </div>
             </div>
             <div
+              ref={aboutNavRef}
               id="about"
-              className="flex pt-32 pb-72 justify-center w-screen h-screen bg-contentbackground  "
+              className="flex pt-32 pb-72 justify-center w-screen h-screen bg-contentbackground pl-24  "
             >
               <About />
             </div>
             <div className="bg-purpleyblueimage bg-cover">
               <div
+                ref={experienceNavRef}
                 id="experience"
-                className="flex pt-56 items-center justify-center w-screen h-screen bg-gradient-to-b from-contentbackground via-transparent to-transparent pb-72 pr-10"
+                className="flex pt-56 items-center justify-center w-screen h-screen bg-gradient-to-b from-contentbackground via-transparent to-transparent pb-72 pl-24"
               >
                 <Experience />
               </div>
               <div
+                ref={skillsNavRef}
                 id="skills"
-                className="flex justify-center w-screen h-screen bg-gradient-to-b from-transparent via-transparent to-contentbackground pt-32"
+                className="flex justify-center w-screen h-screen bg-gradient-to-b from-transparent via-transparent to-contentbackground pt-32 "
               >
                 <Skills />
               </div>
             </div>
             <div
+              ref={workNavRef}
               id="work"
-              className="flex items-center justify-center w-screen bg-contentbackground pr-10"
+              className="flex items-center justify-center w-screen bg-contentbackground pl-44"
             >
               <Work />
             </div>
             <div
+              ref={contactNavRef}
               id="contact"
-              className="flex items-center justify-center w-screen h-screen bg-contentbackground"
+              className="flex items-center justify-center w-screen h-screen bg-contentbackground pl-20"
             >
               <Contact />
             </div>
@@ -158,20 +168,22 @@ export const Home = () => {
             </footer>
           </div>
           <div
-            className={`flex flex-col fixed right-5 top-10 space-y-5 ${
-              navBarVisible ? "animate-disappear invisible " : "animate-appear"
+            className={`flex flex-col fixed left-5 top-10 space-y-5 bg-white rounded-xl text-contentbackground p-3 ${
+              navBarVisible ? "animate-slide2invisible" : "animate-slide"
             }`}
           >
-            <i class="devicon-linkedin-plain text-white text-5xl text-center"></i>
-            <i class="devicon-github-original text-white text-5xl text-center"></i>
-            <button className="text-contentbackground border rounded-lg bg-white">
-              Home
-            </button>
+            <i class="devicon-linkedin-plain text-contentbackground text-5xl text-center"></i>
+            <i class="devicon-github-original text-contentbackground text-5xl text-center"></i>
+            <button className="text-white">Home</button>
             <button
               onClick={() => {
                 scrollToAbout();
               }}
-              className="text-white"
+              className={`${
+                aboutVisible
+                  ? "text-contentbackground rounded-lg bg-white"
+                  : "text-contentbackground"
+              }`}
             >
               About
             </button>
@@ -179,7 +191,11 @@ export const Home = () => {
               onClick={() => {
                 scrollToExperience();
               }}
-              className="text-white"
+              className={`${
+                experienceVisible
+                  ? "text-contentbackground rounded-lg bg-white "
+                  : "text-contentbackground "
+              }`}
             >
               Experience
             </button>
@@ -187,7 +203,7 @@ export const Home = () => {
               onClick={() => {
                 scrollToSkills();
               }}
-              className="text-white"
+              className="text-contentbackground"
             >
               Skills
             </button>
@@ -195,7 +211,7 @@ export const Home = () => {
               onClick={() => {
                 scrollToWork();
               }}
-              className="text-white"
+              className="text-contentbackground"
             >
               Work
             </button>
@@ -203,7 +219,7 @@ export const Home = () => {
               onClick={() => {
                 scrollToContact();
               }}
-              className="text-white"
+              className="text-contentbackground"
             >
               Contact
             </button>
