@@ -1,5 +1,6 @@
 import profileImage from "../../images/portfolioprofile.jpg";
 import Logo from "../../images/Wlogonew.svg";
+import LogoBlue from "../../images/Wlogoblue.svg";
 import { NavBar } from "../navbar/NavBar";
 import { About } from "./About";
 import { Contact } from "./Contact";
@@ -13,7 +14,8 @@ export const Home = () => {
   const options = { threshold: 0.4 };
   const { ref: navbarRef, inView: navBarVisible } = useInView();
   const { ref: aboutNavRef, inView: aboutVisible } = useInView(options);
-  const { ref: experienceNavRef, inView: experienceVisible } = useInView(options);
+  const { ref: experienceNavRef, inView: experienceVisible } =
+    useInView(options);
   const { ref: skillsNavRef, inView: skillsVisible } = useInView(options);
   const { ref: workNavRef, inView: workVisible } = useInView(options);
   const { ref: contactNavRef, inView: contactVisible } = useInView(options);
@@ -94,8 +96,14 @@ export const Home = () => {
           <div className="">
             <div className="w-screen h-screen bg-center xxl:bg-cover xl:bg-cover lg:bg-cover md:bg-cover sm:bg-cover xs:bg-cover bg-homebackground">
               <div className="flex-col justify-between w-screen h-screen bg-cover bg-gradient-to-b from-transparent via-transparent to-contentbackground">
-                <div className="pt-3 pl-3">
-                  <img className="w-24" src={Logo} />
+                <div className="pt-3 pl-3 flex justify-between">
+                  <div>
+                    <img className="w-24" src={Logo} />
+                  </div>
+                  <div className="pt-1 pr-5 space-x-3">
+                    <i className="devicon-linkedin-plain text-white text-5xl text-center"></i>
+                    <i className="devicon-github-original text-white text-5xl text-center"></i>
+                  </div>
                 </div>
                 <div className="flex justify-between w-full pl-10 h-2/4">
                   <div className="xxl:w-1/3 xl:w-64 lg:w-60">
@@ -103,7 +111,7 @@ export const Home = () => {
                       Hi, I'm Jonathan{" "}
                     </h1>
                     <div className="font-spacemono text-white">
-                      Full Stack Web Developer
+                      Full Stack Software Engineer
                     </div>
                   </div>
                   <img
@@ -168,12 +176,17 @@ export const Home = () => {
             </footer>
           </div>
           <div
-            className={`flex flex-col fixed left-5 top-10 space-y-5 bg-white rounded-xl text-contentbackground p-3 ${
-              navBarVisible ? "animate-slide2invisible" : "animate-slide"
+            className={`flex flex-col fixed  top-10 space-y-5 bg-white rounded-xl text-contentbackground p-3 ${
+              navBarVisible
+                ? "-left-40 animate-slide2 transition-all ease-in-out"
+                : "animate-slide left-5"
             }`}
           >
-            <i class="devicon-linkedin-plain text-contentbackground text-5xl text-center"></i>
-            <i class="devicon-github-original text-contentbackground text-5xl text-center"></i>
+            <div className="pt-3 pl-3 pb-5">
+              <img className="w-16" src={LogoBlue} />
+            </div>
+            <i className="devicon-linkedin-plain text-contentbackground text-5xl text-center"></i>
+            <i className="devicon-github-original text-contentbackground text-5xl text-center"></i>
             <button className="text-white">Home</button>
             <button
               onClick={() => {
