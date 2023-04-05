@@ -350,44 +350,6 @@ export const Skills = () => {
                     Npm
                   </h4>
                 </div>
-                <div
-                  onMouseOver={handleMouseOverVscode}
-                  onMouseOut={handleMouseOutVscode}
-                  className="h-32 mb-5 text-center transition-all duration-200 ease-in-out w-fit group/item hover:-translate-y-1"
-                >
-                  <a href="https://code.visualstudio.com/" target="_blank">
-                    <i class="devicon-vscode-plain text-white text-7xl"></i>
-                  </a>
-                  <h4
-                    className={` text-white w-20  ${
-                      isHoveringVscode
-                        ? "opacity-1 group-hover/item:animate-appear"
-                        : "opacity-0 animate-disappear"
-                    }
-                  `}
-                  >
-                    Visual Studio Code
-                  </h4>
-                </div>
-                <div
-                  onMouseOver={handleMouseOverJira}
-                  onMouseOut={handleMouseOutJira}
-                  className="h-32 mb-5 text-center transition-all duration-200 ease-in-out w-fit group/item hover:-translate-y-1"
-                >
-                  <a href="https://code.visualstudio.com/" target="_blank">
-                    <i class="devicon-jira-plain text-white text-7xl"></i>
-                  </a>
-                  <h4
-                    className={` text-white w-20  ${
-                      isHoveringJira
-                        ? "opacity-1 group-hover/item:animate-appear"
-                        : "opacity-0 animate-disappear"
-                    }
-                  `}
-                  >
-                    Jira
-                  </h4>
-                </div>
               </div>
             </div>
           </div>
